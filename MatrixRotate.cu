@@ -56,9 +56,9 @@ int main(int argc, char* argv[]) {
     reverse<<<blocksPerGrid, threadsPerBlock>>>(d_matrix, dimension);
     cudaDeviceSynchronize();
 
-   cudaMemcpy(h_matrix, d_matrix, size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_matrix, d_matrix, size, cudaMemcpyDeviceToHost);
 
-   cudaFree(d_matrix);
+    cudaFree(d_matrix);
 
     cout << endl << endl;
     if(CPUSolveCheck(h_matrix_copy, h_matrix)) cout << "GPU Rotate Successful" << endl;

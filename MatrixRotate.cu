@@ -11,8 +11,8 @@
 
 unsigned int dimension { 1u };
 
-__global__ void transpose(float *matrix, unsigned int dimension);
-__global__ void reverse(float *matrix, unsigned int dimension);
+__global__ void transpose(float *matrix, const unsigned int dimension);
+__global__ void reverse(float *matrix, const unsigned int dimension);
 
 bool CPUSolveCheck(float *originalMatrix, float *solvedMatrix);
 void printMatrix(const float *matrix);
@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-__global__ void transpose(float *matrix, unsigned int dimension) {
+__global__ void transpose(float *matrix, const unsigned int dimension) {
     const int i = blockDim.x * blockIdx.x + threadIdx.x;
     const int j = blockDim.y * blockIdx.y + threadIdx.y;
 
@@ -85,7 +85,7 @@ __global__ void transpose(float *matrix, unsigned int dimension) {
     }
 }
 
-__global__ void reverse(float *matrix, unsigned int dimension) {
+__global__ void reverse(float *matrix, const unsigned int dimension) {
     const int i = blockDim.x * blockIdx.x + threadIdx.x;
     const int j = blockDim.y * blockIdx.y + threadIdx.y;
 

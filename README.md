@@ -8,4 +8,4 @@ The development environment used is the following:
 **Eclipse**: 2021-06</br>
 **gcc**: 9.3</br>
 **nvcc**: cuda_11.4</br>
-**GPU: RTX 3090
+**GPU**: RTX 3090

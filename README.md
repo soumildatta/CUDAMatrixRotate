@@ -4,6 +4,7 @@ This is a simple CUDA program to rotate a Matrix by 90 degrees. Each matrix cell
 ## Dev Environment:
 The development environment used is the following:         
 **OS**: Ubuntu 20.04</br>
+**Kernel**: 5.11</br>
 **CUDA**: 11.4 </br>
 **Eclipse**: 2021-06</br>
 **gcc**: 9.3</br>
